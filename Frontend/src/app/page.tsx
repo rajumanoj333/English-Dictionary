@@ -51,7 +51,7 @@ export default function Home() {
       }
       const result = await response.json()
       setData(result[0])
-    } catch (err) {
+    } catch (_) {
       setError("We couldn't find definitions for the word you're looking for.")
     } finally {
       setLoading(false)
@@ -155,7 +155,7 @@ export default function Home() {
                         <span className="text-zinc-800">{def.definition}</span>
                         {def.example && (
                           <blockquote className="mt-4 border-l-2 border-zinc-900 pl-6 py-1 italic text-zinc-600 text-base">
-                            "{def.example}"
+                            &quot;{def.example}&quot;
                           </blockquote>
                         )}
                       </li>

@@ -45,7 +45,8 @@ export default function Home() {
     setData(null)
 
     try {
-      const response = await fetch(`http://localhost:8000/definition/${word}`)
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://english-dictionary-f4vy.onrender.com"
+      const response = await fetch(`${API_URL}/definition/${word}`)
       if (!response.ok) {
         throw new Error("Word not found")
       }

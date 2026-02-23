@@ -1,12 +1,15 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import httpx
+import os
 
 app = FastAPI()
 
+# Allow all origins for development (restrict in production)
 origins = [
     "http://localhost",
     "http://localhost:3000",
+    "*",
 ]
 
 app.add_middleware(

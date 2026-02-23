@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #09090b; /* zinc-950 */
+  --primary: #18181b; /* zinc-900 */
+  --primary-foreground: #fafafa; /* zinc-50 */
+  --border: #e4e4e7; /* zinc-200 */
+  --input: #e4e4e7;
+  --ring: #18181b;
+}
+
+body {
+  @apply bg-white text-zinc-900 antialiased;
+}
+
+::selection {
+  @apply bg-zinc-200;
+}

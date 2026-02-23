@@ -51,7 +51,7 @@ export default function Home() {
       }
       const result = await response.json()
       setData(result[0])
-    } catch (_) {
+    } catch {
       setError("We couldn't find definitions for the word you're looking for.")
     } finally {
       setLoading(false)
